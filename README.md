@@ -12,7 +12,15 @@ npm install
 npm run dev      # http://localhost:3000
 ```
 
-O projeto é exportado como site estático (`output: "export"`). Cada push na branch `main` publica no GitHub Pages pelo workflow [.github/workflows/pages.yml](.github/workflows/pages.yml).
+O projeto é exportado como site estático (`output: "export"`).
+
+## Publicar a landing
+
+```bash
+npm run deploy
+```
+
+Esse comando gera o site numa cópia temporária e envia só os arquivos prontos para a branch `gh-pages` do repositório público [teteuz/startup-marketplace-site](https://github.com/teteuz/startup-marketplace-site). O código-fonte continua só neste repositório privado. Link público: https://teteuz.github.io/startup-marketplace-site/
 
 > Não rode `npm run build` com o `npm run dev` aberto: os dois usam a pasta `.next` e o servidor de desenvolvimento quebra com erro 500. Se acontecer, pare o dev, apague `.next` e rode de novo.
 

@@ -1,17 +1,15 @@
 /**
- * Exportação estática (GitHub Pages).
- * - GITHUB_PAGES=true → publica em https://<usuario>.github.io/startup-marketplace/
+ * Exportação estática.
+ * NEXT_BASE_PATH define o prefixo quando publicado em subpasta
+ * (ex.: GitHub Pages em https://teteuz.github.io/startup-marketplace-site/).
  */
-const isPages = process.env.GITHUB_PAGES === "true";
-const repo = "startup-marketplace";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
-  basePath: isPages ? `/${repo}` : "",
+  basePath: process.env.NEXT_BASE_PATH || "",
 };
 
 export default nextConfig;
