@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "deploy": "node scripts/deploy-site.mjs"
+    "start": "next start"
   },
   "dependencies": {
     "lucide-react": "^1.80.0",
